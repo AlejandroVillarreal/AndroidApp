@@ -1,0 +1,40 @@
+  {
+  "project_info": {
+    "project_number": "294809248153",
+    "firebase_url": "https://wifiarduino-99ba4.firebaseio.com",
+    "project_id": "wifiarduino-99ba4",
+    "storage_bucket": "wifiarduino-99ba4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294809248153:android:2d8d7928128e50a28db308",
+        "android_client_info": {
+          "package_name": "com.example.arduinoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294809248153-1pjsf3jbhcst0tghe9lhr9a1p34eff3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCscc8wvacOKlctVsceTv6HcvG7GMdky7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294809248153-1pjsf3jbhcst0tghe9lhr9a1p34eff3f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
