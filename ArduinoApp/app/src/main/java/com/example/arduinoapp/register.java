@@ -13,11 +13,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class register extends AppCompatActivity {
     private TextInputLayout textInputEmail;
     //private TextInputLayout textInputUsername;
     private TextInputLayout textInputPassword;
+    private TextInputLayout textInputPassword2;
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,7 @@ public class register extends AppCompatActivity {
         textInputEmail = findViewById(R.id.text_input_email);
        // textInputUsername = findViewById(R.id.text_input_username);
         textInputPassword = findViewById(R.id.text_input_password);
+        textInputPassword2 = findViewById(R.id.text_input_password2);
 
     }
 
@@ -56,7 +63,12 @@ public class register extends AppCompatActivity {
 
     private boolean validatePassword(){
         String passwordInput = textInputPassword.getEditText().getText().toString().trim();
-        if (passwordInput.isEmpty()){
+        String passwordConfirm = textInputPassword2.getEditText().getText().toString().trim();
+        if (!passwordConfirm.equals(passwordInput)){
+            Toast.makeText(register.this, "Password Not matching", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        else if (passwordInput.isEmpty()){
             textInputPassword.setError("Field can't be empty");
             return false;
         } else {
@@ -79,12 +91,14 @@ public class register extends AppCompatActivity {
         //input += "\n";
         input += "Password" + textInputPassword.getEditText().getText().toString();
 
-        Toast.makeText(this, input, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, input, Toast.LENGTH_LONG).show();
         firebaseAuth.getInstance().createUserWithEmailAndPassword(textInputEmail.getEditText().getText().toString(),textInputPassword.getEditText().getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
+
+
                             firebaseAuth.getInstance().getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {

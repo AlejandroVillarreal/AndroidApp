@@ -75,24 +75,20 @@ public class login_activity extends AppCompatActivity {
         }
         String email = textInputEmail.getEditText().getText().toString();
         String password = textInputPassword.getEditText().getText().toString();
-
         //firebaseAuth.getInstance().getCurrentUser().isEmailVerified();
-
-
-
-
-
-        firebaseAuth.getInstance().signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth = firebaseAuth.getInstance();
+        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-
-
+                //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (task.isSuccessful()){
+                    if (firebaseAuth.getCurrentUser().isEmailVerified()){
+                        startActivity(new Intent(login_activity.this, MainActivity.class));
+                    }else{
+                        Toast.makeText(login_activity.this, "Please Verify Your Email", Toast.LENGTH_LONG).show();
+                    }
 
-                    startActivity(new Intent(login_activity.this, MainActivity.class));
                 }else{
                     //startActivity(new Intent(login_activity.this, login_activity.class));
                     Toast.makeText(login_activity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
