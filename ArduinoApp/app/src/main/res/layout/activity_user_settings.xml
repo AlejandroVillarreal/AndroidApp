@@ -9,12 +9,12 @@
     android:padding="16dp"
     >
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_view_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_email"
+        android:id="@+id/text_input_restaurant_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
@@ -23,12 +23,39 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
+            android:hint="Nombre del Restaurante"
+            android:inputType="text"
+
 
             >
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_number_of_tables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de Mesas"
+            android:inputType="numberDecimal"
+
+
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:text="Ocupación Máxima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/max_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 

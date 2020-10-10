@@ -25,6 +25,7 @@ public class login_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login_activity);
         textInputEmail = findViewById(R.id.text_input_email);
         //textInputUsername = findViewById(R.id.text_input_username);
@@ -84,7 +85,10 @@ public class login_activity extends AppCompatActivity {
                 //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (task.isSuccessful()){
                     if (firebaseAuth.getCurrentUser().isEmailVerified()){
-                        startActivity(new Intent(login_activity.this, MainActivity.class));
+                        Intent intent = new Intent(login_activity.this,user_settings.class);
+                        intent.putExtra("uid",firebaseAuth.getCurrentUser().getUid());
+                        startActivity(intent);
+                        //startActivity(new Intent(login_activity.this, user_settings.class));
                     }else{
                         Toast.makeText(login_activity.this, "Please Verify Your Email", Toast.LENGTH_LONG).show();
                     }
@@ -98,6 +102,8 @@ public class login_activity extends AppCompatActivity {
 
 
     }
+
+
 
 
 }

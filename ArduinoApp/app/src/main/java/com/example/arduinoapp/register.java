@@ -90,15 +90,25 @@ public class register extends AppCompatActivity {
         //input += "Username: " + textInputUsername.getEditText().getText().toString();
         //input += "\n";
         input += "Password" + textInputPassword.getEditText().getText().toString();
-
+        firebaseAuth = firebaseAuth.getInstance();
         //Toast.makeText(this, input, Toast.LENGTH_LONG).show();
-        firebaseAuth.getInstance().createUserWithEmailAndPassword(textInputEmail.getEditText().getText().toString(),textInputPassword.getEditText().getText().toString())
+        firebaseAuth.createUserWithEmailAndPassword(textInputEmail.getEditText().getText().toString(),textInputPassword.getEditText().getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-
-
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            String email = user.getEmail();
+                            String userid = user.getUid();
+                            HashMap<Object,String> hashMap = new HashMap<>();
+                            hashMap.put("email",email);
+                            hashMap.put("userid",userid);
+                            hashMap.put("restaurant_name","");
+                            hashMap.put("number_of_tables","");
+                            hashMap.put("max_capacity","");
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference reference = database.getReference("Users");
+                            reference.child(userid).setValue(hashMap);
                             firebaseAuth.getInstance().getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
