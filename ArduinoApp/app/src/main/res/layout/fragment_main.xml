@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/mesas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mesas: "
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimaryDark"
+        />
+    <TextView
+        android:id="@+id/databaseMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp"
+        />
+    <TextView
+        android:id="@+id/capmax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacidad Maxima Permitida:"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="100dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+    <TextView
+        android:id="@+id/databaseCapMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="150dp"
+        />
+    <TextView
+        android:id="@+id/mesasdisponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mesas dispobibles:"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="200dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+    <TextView
+        android:id="@+id/databaseMesaDisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="valor"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="250dp"
+        />
+
+
+
+</RelativeLayout>
