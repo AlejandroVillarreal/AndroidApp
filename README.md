@@ -1,2 +1,2 @@
 # AndroidApp
-- Android and Arduino proyect
+- Android and Arduino project
