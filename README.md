@@ -1,5 +1,5 @@
 # AndroidApp
--Login working
--Register working
--ProfileManagement working
--MainFragment working
+- Login working
+- Register working
+- ProfileManagement working
+- MainFragment working
