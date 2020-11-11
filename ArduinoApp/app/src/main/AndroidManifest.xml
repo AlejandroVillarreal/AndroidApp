@@ -9,16 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".register">
+        <activity android:name=".inicio"></activity>
+        <activity
+            android:name=".principal"
+            android:label="Principal"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".user_settings"
+            android:label="Configuracion Inicial" />
+        <activity
+            android:name=".register"
+            android:label="Registrarse">
+
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".login_activity"
+            android:label="Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".login_activity">
-
         </activity>
     </application>
 
