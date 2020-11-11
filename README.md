@@ -1,2 +1,2 @@
 # AndroidApp
-- Android and Arduino project
+- Language support only works with device settings
