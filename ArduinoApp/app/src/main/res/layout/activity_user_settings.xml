@@ -4,59 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".user_settings"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".register">
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_email"
+    >
+    <TextView
+        android:id="@+id/text_view_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:errorEnabled="true"
-
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-
-            >
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:errorEnabled="true"
-        app:passwordToggleEnabled="true"
-
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            >
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_password2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:errorEnabled="true"
-        app:passwordToggleEnabled="true"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/password_confirm"
-            android:inputType="textPassword"
-
-            >
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:text="TextView" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_restaurant_name"
         android:layout_width="match_parent"
@@ -95,9 +51,7 @@
     <TextView
         android:text="@string/ocupacion_max"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        />
+        android:layout_height="wrap_content"/>
     <Spinner
         android:id="@+id/max_capacity"
         android:layout_width="match_parent"
@@ -105,10 +59,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="confirmSignup"
-        android:text="@string/confirma_registro"
+        android:onClick="confirmUserSettings"
+        android:text="@string/confirm"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="20dp"
+        />
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

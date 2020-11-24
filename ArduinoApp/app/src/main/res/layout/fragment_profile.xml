@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    >
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_edit_restaurant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+
+        >
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_edit_number_of_tables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:errorEnabled="true"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/numero_mesas"
+            android:inputType="numberDecimal"
+
+
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="confirmEdit"
+        android:layout_centerVertical="true"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

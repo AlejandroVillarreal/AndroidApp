@@ -7,7 +7,19 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".login_activity">
-
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/tabla"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurante Seguro"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/colorPrimary"></TextView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_email"
         android:layout_width="match_parent"
@@ -18,7 +30,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
 
         >
@@ -35,7 +47,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
 
             >
@@ -45,6 +57,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="confirmInput"
-        android:text="confirm"
+        android:text="@string/inicio_sesion"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="confirmRegistro"
+        android:text="@string/registrarse"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="5dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="5dp"
+        android:text="@string/language"
+        android:textColor="@color/white"
+        android:onClick="change_language"/>
+
+    <TextView
+        android:id="@+id/text_view_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/text_view_max_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/text_view_number_of_tables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </androidx.appcompat.widget.LinearLayoutCompat>

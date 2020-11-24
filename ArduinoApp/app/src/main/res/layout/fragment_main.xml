@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/pizza_place_logo"
+
+    >
+
+    <TextView
+        android:id="@+id/mesas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mesas"
+
+        android:textSize="25dp"
+        android:layout_margin="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+    <TextView
+        android:id="@+id/databaseMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25dp"
+        android:layout_toRightOf="@id/mesas"
+        android:layout_alignTop="@id/mesas"
+        android:textColor="@color/ultramarine"
+        />
+    <TextView
+        android:id="@+id/capmax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ocupacion_max"
+        android:textSize="25dp"
+        android:layout_margin="20dp"
+
+        android:layout_below="@id/mesas"
+        android:textColor="@color/colorPrimaryDark"
+
+        />
+    <TextView
+        android:id="@+id/databaseCapMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25dp"
+        android:layout_alignTop="@id/capmax"
+        android:layout_toRightOf="@id/capmax"
+        android:textColor="@color/ultramarine"
+
+        />
+    <TextView
+        android:id="@+id/mesasdisponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mesas_disponibles"
+        android:textSize="25dp"
+        android:layout_below="@id/capmax"
+        android:layout_margin="20dp"
+
+        android:textColor="@color/colorPrimaryDark"
+        />
+    <TextView
+        android:id="@+id/databaseMesaDisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25dp"
+        android:textColor="@color/green"
+        android:layout_toRightOf="@id/mesasdisponibles"
+        android:layout_alignTop="@id/mesasdisponibles"
+        />
+    <TextView
+        android:id="@+id/edita_cap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edita_cap"
+        android:textSize="25dp"
+        android:layout_below="@id/databaseMesaDisponible"
+        android:layout_margin="20dp"
+
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/edit_max_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edita_cap"
+        android:theme="@style/spinnerTheme"
+        />
+
+</RelativeLayout>
